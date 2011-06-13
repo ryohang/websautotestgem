@@ -1,5 +1,3 @@
-#require 'module/commonmethod'
-#require 'sitebuilder_page'
 
 module Websautotest
     module Pagepattern

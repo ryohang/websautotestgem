@@ -1,7 +1,3 @@
-#require 'module/commonmethod.rb'
-#require 'co-reg_page.rb'
-#require 'portal_page.rb'
-
 module Websautotest
     module Pagepattern
         class Signup < Portal

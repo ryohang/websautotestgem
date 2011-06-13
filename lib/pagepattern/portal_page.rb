@@ -1,7 +1,3 @@
-#require 'module/commonmethod'
-
-#require 'signup_page'
-
 module Websautotest
     module Pagepattern
         class Portal
@@ -52,6 +48,24 @@ module Websautotest
                 end
 
             end
+
+            def click_signinpopup
+                @session.find("//a[@id='sign_in_nav']/span").click
+            end
+
+            def fill_logincred(user,password)
+                @session.within("//div[contains(@class,'clearfix sign_in_fields')]") do
+                    @session.fill_in "FWloginUsername", :with => user
+                    @session.evaluate_script("document.getElementById('FWloginPassword').focus()")
+                    @session.fill_in "FWloginPassword2", :with=> password
+                end
+            end
+            
+            def clicksignin_goto_dashboard
+               @session.find("//form[@id='login_leaf']/div[@class='clearfix sign_in_fields']/descendant::input[@id='sign_in_leaf']").click
+               @Dashboard=Dashboard.new(@session)
+            end
+            
         end
 
     end

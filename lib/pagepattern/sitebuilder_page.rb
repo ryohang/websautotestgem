@@ -1,5 +1,3 @@
-#require 'module/commonmethod'
-
 module Websautotest
     module Pagepattern
         class Sitebuilder

@@ -8,5 +8,7 @@ module Websautotest
     autoload :Signup,                    'pagepattern/signup_page'
     autoload :Coreg,                     'pagepattern/co-reg_page'
     autoload :Sitebuilder,               'pagepattern/sitebuilder_page'
+    autoload :Dashboard,                 'pagepattern/dashboard_page'
+    autoload :Shopcart,                  'pagepattern/shopcart_page' 
   end  
 end

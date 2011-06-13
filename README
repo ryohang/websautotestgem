@@ -3,11 +3,14 @@
 all webs automation page object written in ruby goes here
 
 page list:
-Co-reg_page.rb
-Portal_page.rb
-Signup_page.rb
-Sitebuilder_page.rb
-
+lib/module/commonmethod.rb
+lib/pagepattern/co-reg_page.rb
+lib/pagepattern/dashboard_page.rb
+lib/pagepattern/portal_page.rb
+lib/pagepattern/shopcart_page.rb
+lib/pagepattern/signup_page.rb
+lib/pagepattern/sitebuilder_page.rb
+lib/websautotest.rb
 
 it has been published to the https://rubygems.org/ already
 you should be able to install through 

@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = %q{websautotest}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
   s.date = %q{2011-06-10}
   s.authors = ["Ryo HANG"]
   s.email = %q{ryo@webs.com}
