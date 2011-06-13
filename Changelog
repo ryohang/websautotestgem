@@ -1,0 +1,1 @@
+0.1.0 inital move all the pagepattern to one module and start using autoload in the websautotest.rb

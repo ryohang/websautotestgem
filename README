@@ -1,0 +1,9 @@
+== webs pageobject gem
+
+all webs automation page object written in ruby goes here
+
+page list:
+Co-reg_page.rb
+Portal_page.rb
+Signup_page.rb
+Sitebuilder_page.rb
