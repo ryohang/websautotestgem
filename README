@@ -7,3 +7,13 @@ Co-reg_page.rb
 Portal_page.rb
 Signup_page.rb
 Sitebuilder_page.rb
+
+
+it has been published to the https://rubygems.org/ already
+you should be able to install through 
+gem install websautotest
+
+
+to push new update
+gem build websautotest.gemspec
+gem push websautotest
