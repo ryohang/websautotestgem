@@ -1,0 +1,11 @@
+Changelog
+README
+Rakefile
+lib/module/commonmethod.rb
+lib/pagepattern/co-reg_page.rb
+lib/pagepattern/portal_page.rb
+lib/pagepattern/signup_page.rb
+lib/pagepattern/sitebuilder_page.rb
+lib/websautotest.rb
+pageobject.gemspec
+Manifest
