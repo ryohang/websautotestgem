@@ -8,6 +8,7 @@ lib/pagepattern/portal_page.rb
 lib/pagepattern/shopcart_page.rb
 lib/pagepattern/signup_page.rb
 lib/pagepattern/sitebuilder_page.rb
+lib/pagepattern/Sitebuilderfinch_page.rb
 lib/websautotest.rb
 updatelocalgem.sh
 websautotest.gemspec

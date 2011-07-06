@@ -11,29 +11,29 @@ module Websautotest
             end
 
             def clickstarted_goto_signup
-                @session.find("//div[contains(@style,'display: block')]/descendant::input[contains(@id,'signup_button')]").click
+                @session.find("//div[contains(@class,'gwo_streamlined_signup with_type')]/descendant::input[contains(@id,'signup_button')]").click
                 @Signup=Signup.new(@session)
             end
 
             def emailsignup(repeattimes)
-                lookfor_signuppage(repeattimes,"//div[contains(@class,'gwo_streamlined_signup with_type hidden') and contains(@style,'display: block')]")
+                lookfor_signuppage(repeattimes,"//div[contains(@class,'gwo_streamlined_signup with_type')]")
             end
 
             def fill_email(email)
-                @session.within("//div[contains(@class,'gwo_streamlined_signup with_type hidden') and contains(@style,'display: block')]") do
+                @session.within("//div[contains(@class,'gwo_streamlined_signup with_type')]") do
                     @session.fill_in "email_address", :with =>email
                 end
             end
 
             def fill_password(password)
-                @session.within("//div[contains(@class,'gwo_streamlined_signup with_type hidden') and contains(@style,'display: block')]") do
+                @session.within("//div[contains(@class,'gwo_streamlined_signup with_type')]") do
                     @session.fill_in "register_password", :with => password
                 end
             end
 
             def select_webstype(type)
-                @session.find("//div[contains(@style,'display: block')]/descendant::div[@class='select_selected']").click
-                @session.find("//div[contains(@style,'display: block')]/descendant::li[contains(text(),'#{type}')]").click
+                @session.find("//div[contains(@class,'gwo_streamlined_signup with_type')]/descendant::div[@class='select_selected']").click
+                @session.find("//div[contains(@class,'gwo_streamlined_signup with_type')]/descendant::li[contains(text(),'#{type}')]").click
             end
 
             def lookfor_signuppage(repeattime,xpath)

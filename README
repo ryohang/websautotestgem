@@ -10,6 +10,7 @@ lib/pagepattern/portal_page.rb
 lib/pagepattern/shopcart_page.rb
 lib/pagepattern/signup_page.rb
 lib/pagepattern/sitebuilder_page.rb
+lib/pagepattern/sitebuilderfinch_page.rb
 lib/websautotest.rb
 
 it has been published to the https://rubygems.org/ already
@@ -19,4 +20,4 @@ gem install websautotest
 
 to push new update
 gem build websautotest.gemspec
-gem push websautotest
+gem push websautotest-{version}
