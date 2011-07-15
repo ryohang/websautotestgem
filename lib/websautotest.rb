@@ -10,6 +10,7 @@ module Websautotest
     autoload :Sitebuilder,               'pagepattern/sitebuilder_page'
     autoload :Dashboard,                 'pagepattern/dashboard_page'
     autoload :Shopcart,                  'pagepattern/shopcart_page' 
-    autoload :Sitebuilderfinch,          'pagepattern/sitebuilderfinch_page'         
+    autoload :Sitebuilderfinch,          'pagepattern/sitebuilderfinch_page'   
+    autoload :Sitemanager,               'pagepattern/sitemanager_page'      
   end  
 end

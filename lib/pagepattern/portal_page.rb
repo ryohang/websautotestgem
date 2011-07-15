@@ -66,6 +66,10 @@ module Websautotest
                @Dashboard=Dashboard.new(@session)
             end
             
+            def clicksignin_goto_sitemanager
+              @session.find("//form[@id='login_leaf']/div[@class='clearfix sign_in_fields']/descendant::input[@id='sign_in_leaf']").click
+              @Sitemanager=Sitemanager.new(@session)
+            end
         end
 
     end

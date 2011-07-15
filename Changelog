@@ -1,3 +1,4 @@
 0.1.0 inital move all the pagepattern to one module and start using autoload in the websautotest.rb
 0.1.1 add dashboard_page and shopcart_page
 0.1.2 add sitebuilder finch into the gem class name is sitebuilderfinch_page.rb
+0.1.3 add sitemanager pattern and intergate sitebuilder finch into to the testing workflow

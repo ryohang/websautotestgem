@@ -11,6 +11,7 @@ lib/pagepattern/shopcart_page.rb
 lib/pagepattern/signup_page.rb
 lib/pagepattern/sitebuilder_page.rb
 lib/pagepattern/sitebuilderfinch_page.rb
+lib/pagepattern/sitemanager_page.rb
 lib/websautotest.rb
 
 it has been published to the https://rubygems.org/ already
