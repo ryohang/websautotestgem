@@ -54,11 +54,18 @@ module Websautotest
             end
 
             def fill_logincred(user,password)
-                @session.within("//div[contains(@class,'clearfix sign_in_fields')]") do
+                @session.within("//div[@class='clearfix sign_in_fields']") do
+                    #@session.driver.browser.find_element("input[@id='FWloginUsername]").send_keys(user,:tab,password)
                     @session.fill_in "FWloginUsername", :with => user
-                    @session.evaluate_script("document.getElementById('FWloginPassword').focus()")
-                    @session.fill_in "FWloginPassword2", :with=> password
+                    #@session.driver.browser.find_element("input[@id='FWloginPassword]").click
+                    #javascript hacking!
+                    @session.execute_script("document.getElementById('FWloginPassword2').style.display=\"block\"")
+                    @session.execute_script("document.getElementById('FWloginPassword2').value='#{password}'")
+                    #@session.driver.browser.find_element("//input[@id='FWloginPassword2']").send_keys(password)
+                    #@session.driver.browser.find_element("input[@id='FWloginPassword]").send_keys(password)
+                    #@session.fill_in "FWloginPassword2", :with=> password
                 end
+                
             end
             
             def clicksignin_goto_dashboard
@@ -67,9 +74,9 @@ module Websautotest
             end
             
             def clicksignin_goto_sitemanager
-              @session.find("//form[@id='login_leaf']/div[@class='clearfix sign_in_fields']/descendant::input[@id='sign_in_leaf']").click
-              @Sitemanager=Sitemanager.new(@session)
-            end
+                @session.find("//form[@id='login_leaf']/div[@class='clearfix sign_in_fields']/descendant::input[@id='sign_in_leaf']").click
+                @Sitemanager=Sitemanager.new(@session)
+            end  
         end
 
     end
