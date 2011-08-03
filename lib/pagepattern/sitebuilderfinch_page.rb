@@ -2,10 +2,13 @@ module Websautotest
     module Pagepattern
         class Sitebuilderfinch
           include Websautotest::CommonPageOperation
+          def wait_for_iframe_to_load(iframe)
+            @session.wait_until(10){@session.should have_xpath("//iframe[@id='#{iframe}']")}
+          end
           def dragelement_into_iframe(modulename,iframe)
             srclocation=nil
             @session.within_frame(iframe) do
-              srclocation=@session.driver.browser.find_element(:xpath,"//div[@id='secondary']/descendant::*/div[@class='bldr-container']").location
+              srclocation=@session.driver.browser.find_element(:xpath,"//div[@id='body-wrapper-full']/descendant::*/div[contains(@class,'bldr-container')]").location
             end     
               targetlocation=@session.driver.browser.find_element(:xpath,"//div[@data-moduletype='#{modulename}']").location
               offsetwidth=@session.driver.browser.find_element(:xpath,"//div[@data-moduletype='#{modulename}']").style("width").to_i
@@ -17,20 +20,20 @@ module Websautotest
 
       def assertdroppedelement(modulename,iframe)
            @session.within_frame(iframe) do
-              @session.should have_xpath("//div[@id='secondary']/descendant::*/div[@class='bldr-container']/h3[@class='webs-#{modulename}']")
+              @session.should have_xpath("//div[@id='body-wrapper-full']/descendant::*/div[contains(@class,'bldr-container')]/div[@class='webs-#{modulename}']")
            end
        end
        
        def editText(modulename,context,iframe)
             @session.within_frame(iframe) do
-            @session.driver.browser.find_element(:xpath,"//div[@id='secondary']/descendant::*/div[@class='bldr-container']/h3[@class='webs-#{modulename}']").click
-            @session.driver.browser.find_element(:xpath,"//div[@id='secondary']/descendant::*/div[@class='bldr-container']/h3[@class='webs-#{modulename}']").send_keys context
+            @session.driver.browser.find_element(:xpath,"//div[@id='body-wrapper-full']/descendant::*/div[contains(@class,'bldr-container')]/div[@class='webs-#{modulename}']").click
+            @session.driver.browser.find_element(:xpath,"//div[@id='body-wrapper-full']/descendant::*/div[contains(@class,'bldr-container')]/div[@class='webs-#{modulename}']").send_keys context
             end 
        end
       
        def assertnewText(modulename,context,iframe)
           @session.within_frame(iframe) do
-           @session.find(:xpath,"//div[@id='secondary']/descendant::*/div[@class='bldr-container']/h3[@class='webs-#{modulename}']").text.should include(context)
+           @session.find(:xpath,"//div[@id='body-wrapper-full']/descendant::*/div[contains(@class,'bldr-container')]/div[@class='webs-#{modulename}']").text.should include(context)
           end
        end
     end
